@@ -1,21 +1,26 @@
 {
   "compilerOptions": {
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "noEmit": true,
-    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
+    "incremental": true,
+    "noUnusedLocals": true, // 使っていないローカル変数をエラーにする
+    "noUnusedParameters": true, // 使っていない仮引数をエラーにする
+    "noImplicitReturns": true, // 暗黙的にundefinedを返している関数をエラーにする
+    "allowUnreachableCode": false, // 到達し得ないコードをエラーとする
+    "forceConsistentCasingInFileNames": true, // 大文字小文字を区別して参照する
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
